@@ -20,7 +20,8 @@ about:
 
 # Work History 
  - Engagement Analyst Intern  |  The Cheesecake Factory, Inc. 
- - Research Assistant  |  UCSD Department of Economics 
+ - Research Assistant  |  UCSD Department of Economics git push -u origin main
+
 
 # Education 
  - M.S. in Business Analytics  |  Rady School of Management 2025
