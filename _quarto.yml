@@ -1,0 +1,24 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Nicole Ziola"
+  navbar:
+    left:
+      - href: index.qmd
+        text: About
+
+      - href: resume.qmd
+        text: Resume
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
+
+
+

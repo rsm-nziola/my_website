@@ -1,0 +1,27 @@
+---
+title: "Nicole Ziola"
+image: "images/headshot.jpeg"
+format:
+  html:
+    toc: false
+about:
+  template: trestles
+  image-shape: round
+  links:
+    - icon: envelope
+      href: mailto:nicoleziola1209@gmail.com
+    - icon: linkedin
+      href: https://www.linkedin.com/in/nicoleziola
+---
+
+# Current
+ - Teaching Assistant, Experiments in Firms  |  Rady School of Management
+ - Incoming Data & Analytics Consultant  |  FTI Consulting
+
+# Education 
+ - M.S. in Business Analytics  |  Rady School of Management 2025
+ - B.S. in Business Economics  |  UC San Diego 2024
+
+This is a Quarto website.
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.

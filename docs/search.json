@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Nicole Ziola",
+    "section": "",
+    "text": "Current\n\nTeaching Assistant, Experiments in Firms | Rady School of Management\nIncoming Data & Analytics Consultant | FTI Consulting\n\n\n\nEducation\n\nM.S. in Business Analytics | Rady School of Management 2025\nB.S. in Business Economics | UC San Diego 2024\n\nThis is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "resume.html",
+    "href": "resume.html",
+    "title": "Resume",
+    "section": "",
+    "text": "Download Resume"
+  },
+  {
+    "objectID": "resume.html#education",
+    "href": "resume.html#education",
+    "title": "Resume",
+    "section": "🎓 Education",
+    "text": "🎓 Education\nMaster of Science in Business Analytics, Rady School of Management\nUniversity of California, San Diego — Expected June 2025\nGPA: 3.92/4.0\n- Relevant Coursework: Business Analytics, Collecting and Analyzing Large Data, Customer Analytics, Web Mining & Recommender Systems, Data-Driven Communications, Marketing Analytics\nBachelor of Science in Business Economics\nUniversity of California, San Diego — June 2024\nGPA: 3.93/4.0, cum laude\n- Honors: Provost’s Honors, TMC Honors Program, TRELS Scholarship Recipient\n- Relevant Coursework: Principles of Data Science, Data/Model Programming, Econometrics"
+  },
+  {
+    "objectID": "resume.html#professional-experience",
+    "href": "resume.html#professional-experience",
+    "title": "Resume",
+    "section": "💼 Professional Experience",
+    "text": "💼 Professional Experience\nIncoming Data Analytics Consultant, FTI Consulting – Los Angeles, CA\nOct 2024 – Present\n- Leverage data science and machine learning to support forensic/litigation needs\n- Advise clients on business strategy using data-driven insights\nTeaching Assistant, Experiments in Firms – Rady School of Management\nSep 2024 – Present\n- Supported 100+ students in designing experiments and understanding causal inference\n- Taught randomization, statistical analysis, and behavioral econ principles\nEngagement Analyst Intern, The Cheesecake Factory Inc. – Calabasas, CA\nJun 2023 – Sep 2023\n- Analyzed 45,000+ survey responses, delivering insights to executives across 250+ locations\n- Designed data storytelling presentations with visualizations & correlations\n- Boosted survey engagement by 50% via policy and leadership changes\nResearch Assistant, UCSD Department of Economics – San Diego, CA\nJan 2023 – Jun 2023\n- Deployed 1,000+ surveys via Qualtrics for societal/environmental impact study\n- Used Python for data cleaning, statistical analysis, and visualization"
+  },
+  {
+    "objectID": "resume.html#projects",
+    "href": "resume.html#projects",
+    "title": "Resume",
+    "section": "",
+    "text": "ETL Case Study – Rady School of Management\nAug 2024\n- Built Snowflake/Python ETL pipeline to combine CSV, XML, Postgres & weather data\n- Used SQL for data wrangling and purchase order analysis"
+  },
+  {
+    "objectID": "resume.html#skills-interests",
+    "href": "resume.html#skills-interests",
+    "title": "Resume",
+    "section": "",
+    "text": "Languages/Tools: Python, R, SQL, ETL, Stata, PowerBI, Tableau, Glint, Qualtrics, Microsoft & Google Suite\nInterests: Marathon running, cooking, soccer, sustainable fashion, health, music"
+  },
+  {
+    "objectID": "resume.html#leadership-affiliations",
+    "href": "resume.html#leadership-affiliations",
+    "title": "Resume",
+    "section": "👩‍💼 Leadership & Affiliations",
+    "text": "👩‍💼 Leadership & Affiliations\nVP of Professional Development, Women in Business – San Diego, CA\nJun 2023 – Jun 2024\n- Led team of 8 to deliver a professional certification program to 250+ students\n- Increased completion rate by 40 members year-over-year"
+  },
+  {
+    "objectID": "resume.html#skills",
+    "href": "resume.html#skills",
+    "title": "Resume",
+    "section": "💡 Skills",
+    "text": "💡 Skills\nLanguages/Tools: Python, R, SQL, ETL, Stata, PowerBI, Tableau, Glint, Qualtrics, Microsoft & Google Suite"
+  }
+]
