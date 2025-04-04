@@ -3,4 +3,11 @@ ul {
     list-style-type: circle;
     padding-left: 1.5em;
   }
+
+.about-brief ul li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
   
