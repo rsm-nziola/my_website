@@ -1,0 +1,10 @@
+---
+title: "Projects"
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+
+

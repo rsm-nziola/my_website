@@ -14,19 +14,20 @@ about:
       href: https://www.linkedin.com/in/nicoleziola
 ---
 
+
 # Current
- - Teaching Assistant, Experiments in Firms  |  Rady School of Management
- - Incoming Data & Analytics Consultant  |  FTI Consulting
+  - <span style="white-space: nowrap;">Data Analyst  |  San Marcos Unified School District</span>
+ - <span style="white-space: nowrap;">Teaching Assistant, Experiments in Firms  |  Rady School of Management</span>
+ - <span style="white-space: nowrap;">Incoming Data & Analytics Consultant  |  FTI Consulting</span>
 
 # Work History 
- - Engagement Analyst Intern  |  The Cheesecake Factory, Inc. 
- - Research Assistant  |  UCSD Department of Economics git push -u origin main
-
+ - <span style="white-space: nowrap;">Engagement Analyst Intern  |  The Cheesecake Factory, Inc.</span>
+ - <span style="white-space: nowrap;">Research Assistant  |  UCSD Department of Economics</span>
 
 # Education 
- - M.S. in Business Analytics  |  Rady School of Management 2025
- - B.S. in Business Economics  |  UC San Diego 2024
+ - <span style="white-space: nowrap;">M.S. in Business Analytics  |  Rady School of Management 2025</span>
+ - <span style="white-space: nowrap;">B.S. in Business Economics  |  UC San Diego 2024</span>
 
-This is a Quarto website.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+
+

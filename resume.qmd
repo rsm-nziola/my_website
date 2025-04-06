@@ -59,7 +59,7 @@ GPA: 3.93/4.0, *cum laude*
 
 ## 💡 Skills 
 
-**Languages/Tools:** Python, R, SQL, ETL, Stata, PowerBI, Tableau, Glint, Qualtrics, Microsoft & Google Suite  
+**Languages/Tools:** Python, R, SQL, ETL, Stata, PowerBI, Tableau, Glint, Qualtrics, Microsoft & Google Suite 
 
 ---
 
