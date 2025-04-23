@@ -99,6 +99,47 @@ df = pd.read_stata("karlan_list_2007.dta")
 As an ad hoc test of the randomization mechanism, I provide a series of tests that compare aspects of the treatment and control groups to assess whether they are statistically significantly different from one another.
 
 ```{python}
+
+import statsmodels.api as sm
+
+def summarize_ols(model):
+    coef = model.params
+    se = model.bse
+    tstat = model.tvalues
+    pval = model.pvalues
+    conf_int = model.conf_int()
+
+    print("📊 OLS Regression Summary")
+    print("-" * 40)
+    for var in coef.index:
+        print(f"Variable: {var}")
+        print(f"  Coefficient     : {coef[var]:.4f}")
+        print(f"  Std. Error      : {se[var]:.4f}")
+        print(f"  t-statistic     : {tstat[var]:.4f}")
+        print(f"  p-value         : {pval[var]:.4f}")
+        print(f"  95% CI          : [{conf_int.loc[var, 0]:.4f}, {conf_int.loc[var, 1]:.4f}]")
+        print("-" * 40)
+
+import statsmodels.formula.api as smf
+
+def summarize_probit(model):
+    coef = model.params
+    se = model.bse
+    zstat = model.tvalues
+    pval = model.pvalues
+    conf_int = model.conf_int()
+
+    print("📈 Probit Regression Summary")
+    print("-" * 40)
+    for var in coef.index:
+        print(f"Variable: {var}")
+        print(f"  Coefficient     : {coef[var]:.4f}")
+        print(f"  Std. Error      : {se[var]:.4f}")
+        print(f"  z-statistic     : {zstat[var]:.4f}")
+        print(f"  p-value         : {pval[var]:.4f}")
+        print(f"  95% CI          : [{conf_int.loc[var, 0]:.4f}, {conf_int.loc[var, 1]:.4f}]")
+        print("-" * 40)
+
 variables = ['mrm2', 'hpa', 'freq', 'female'] 
 
 results = []
@@ -210,8 +251,7 @@ X = sm.add_constant(df['treatment'])
 y = df['gave']
 model = sm.OLS(y, X).fit()
 
-print("Regression results:")
-print(model.summary())
+summarize_ols(model)
 ```
 
 The p-value is significant at the 95% confidence level, allowing us to conclude that the difference in donation rates between treatment and control is statistically significant and not due to random chance alone. 
@@ -227,7 +267,7 @@ import statsmodels.formula.api as smf
 
 # Probit regression of 'gave' on 'treatment'
 probit_model = smf.probit('gave ~ treatment', data=df).fit()
-print(probit_model.summary())
+print(summarize_probit(probit_model))
 ```
 
 In further support of the t-test and regression conclusion, I used probit regression, which confirms our initial findings with a statistically significant and positive coefficient value of 0.0868 on treatment. This suggests that holding all else constant, participants are more likely to donate if they are part of the treatment group rather than the control.  
@@ -264,7 +304,7 @@ The t-test series analyzing the size of the match ratio suggest that there is no
 cat_model = smf.ols('gave ~ C(ratio)', data=df).fit()
 
 print("\nRegression with Categorical Variable:")
-print(cat_model.summary())
+print(summarize_ols(cat_model))
 ```
 
 Next, I will use regression with ratio as a categorical variable in order to confirm the t-test results.
@@ -343,7 +383,7 @@ print(f"  P-value: {p_val:.4f}\n")
 model = smf.ols('amount ~ treatment', data=df).fit()
 
 print("Bivariate Linear Regression: Donation Amount ~ Treatment")
-print(model.summary())
+print(summarize_ols(model))
 ```
 
 This analysis tells us whether offering a matching ratio of any amount influences the dollar amount of the donation, regardless of whether or not a donation was made (meaning zeros are included for non-donors).
@@ -377,7 +417,7 @@ print(f"  P-value: {p_val:.4f}\n")
 model = smf.ols('amount ~ treatment', data=df_donors).fit()
 
 print("OLS Regression (Amount Given | Gave = 1):")
-print(model.summary())
+print(summarize_ols(model))
 ```
 
 This regression answers the question: "Among people who chose to donate, did those who received a match offer give more or less money than those who didn’t?"
