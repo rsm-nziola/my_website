@@ -540,41 +540,45 @@ This behavior demonstrates the law of large numbers in action: as the number of 
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Filter to only people who donated
-df_donors = df[df['gave'] == 1]
+# --- Simulation Settings ---
+np.random.seed(42)
+p_control = 0.018  # Probability of success in control group
+p_treatment = 0.022  # Probability of success in treatment group
+sample_sizes = [50, 200, 500, 1000]  # Different sample sizes to simulate
+n_simulations = 1000  # Number of simulations per sample size
+true_diff = p_treatment - p_control  # True difference in proportions
 
-# Extract treatment and control donation values
-control = df_donors[df_donors['treatment'] == 0]['amount'].values
-treatment = df_donors[df_donors['treatment'] == 1]['amount'].values
+# --- Function to simulate sampling distribution of mean differences ---
+def simulate_diffs(n, p_control, p_treatment, reps=1000):
+    diffs = []
+    for _ in range(reps):
+        control_sample = np.random.binomial(1, p_control, n)
+        treatment_sample = np.random.binomial(1, p_treatment, n)
+        diff = np.mean(treatment_sample) - np.mean(control_sample)
+        diffs.append(diff)
+    return np.array(diffs)
 
-# Sample sizes and number of simulations
-sample_sizes = [50, 200, 500, 1000]
-num_simulations = 1000
-
-# Setup 2x2 plot
-fig, axes = plt.subplots(2, 2, figsize=(14, 10))
+# --- Generate and Plot Histograms ---
+fig, axes = plt.subplots(2, 2, figsize=(12, 10), sharey=True)
 axes = axes.flatten()
 
-np.random.seed(42)
-
 for i, n in enumerate(sample_sizes):
-    avg_diffs = []
-    for _ in range(num_simulations):
-        control_sample = np.random.choice(control, size=n, replace=True)
-        treatment_sample = np.random.choice(treatment, size=n, replace=True)
-        avg_diffs.append(np.mean(treatment_sample) - np.mean(control_sample))
+    simulated_diffs = simulate_diffs(n, p_control, p_treatment, n_simulations)
     
     ax = axes[i]
-    ax.hist(avg_diffs, bins=30, color='skyblue', edgecolor='black')
-    ax.axvline(0, color='red', linestyle='--', label='Zero')
+    ax.hist(simulated_diffs, bins=30, density=True, alpha=0.7, edgecolor='black', color='skyblue')
+    ax.axvline(0, color='black', linestyle='--', linewidth=1, label='Zero')
+    ax.axvline(true_diff, color='red', linestyle='--', linewidth=2, label=f'True Diff = {true_diff:.3f}')
+    
     ax.set_title(f"Sample Size = {n}")
-    ax.set_xlabel("Avg Difference (Treatment - Control)")
-    ax.set_ylabel("Frequency")
+    ax.set_xlabel("Difference in Means")
+    ax.set_ylabel("Density")
     ax.legend()
 
-plt.suptitle("Sampling Distribution of Mean Differences (Treatment - Control)", fontsize=16)
+plt.suptitle("Sampling Distributions of Differences in Proportions", fontsize=16)
 plt.tight_layout(rect=[0, 0.03, 1, 0.95])
 plt.show()
+
 ```
 
 As the sample size increases, zero shifts from being in the middle of the distribution to being in the tail.
