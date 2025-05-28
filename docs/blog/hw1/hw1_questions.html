@@ -219,7 +219,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="data">Data</h2>
 <section id="description" class="level3">
 <h3 class="anchored" data-anchor-id="description">Description</h3>
-<div id="a8164261" class="cell" data-execution_count="1">
+<div id="4cdc23c1" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -468,7 +468,7 @@ Variable Definitions
 <section id="balance-test" class="level3">
 <h3 class="anchored" data-anchor-id="balance-test">Balance Test</h3>
 <p>As an ad hoc test of the randomization mechanism, I provide a series of tests that compare aspects of the treatment and control groups to assess whether they are statistically significantly different from one another.</p>
-<div id="02b269c3" class="cell" data-execution_count="2">
+<div id="9c912880" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
@@ -619,7 +619,7 @@ Variable Definitions
 <section id="charitable-contribution-made" class="level3">
 <h3 class="anchored" data-anchor-id="charitable-contribution-made">Charitable Contribution Made</h3>
 <p>First, I analyze whether matched donations lead to an increased response rate of making a donation. The donation rates in the treatment vs.&nbsp;control groups are 2.2% and 1.79%, respectively.</p>
-<div id="0fb22244" class="cell" data-execution_count="3">
+<div id="680c3fa9" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>proportion_treatment <span class="op">=</span> df[df[<span class="st">'treatment'</span>] <span class="op">==</span> <span class="dv">1</span>][<span class="st">'gave'</span>].mean()</span>
@@ -651,7 +651,7 @@ Variable Definitions
 </div>
 </div>
 <p>Next, I utilize t-tests and linear regression to analyze if the difference in donation rate proportions are statistically significant.</p>
-<div id="56a6ed3a" class="cell" data-execution_count="4">
+<div id="f7acc683" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># --- T-</span><span class="al">TEST</span><span class="co">: Difference in proportions for binary outcome 'gave' between treatment and control ---</span></span>
@@ -719,7 +719,7 @@ Variable: treatment
 <p>When people were told their donation would be matched, they were more likely to give compared to those who did not receive the same offer. Even though the difference in donation rates is not huge, it is meaningful enough to show that the match offer was impactful on human behavior.</p>
 <p>We also ran a regression that supported the same conclusion: the offer of a match made people slightly more likely to donate.</p>
 <p>In short, match-based donation programs achieve slightly higher dconation rates than non-matched programs, suggesting that the extra push from donation matching is effective in boosting donation rates.</p>
-<div id="33eedd51" class="cell" data-execution_count="5">
+<div id="a00e38f9" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.formula.api <span class="im">as</span> smf</span>
@@ -756,7 +756,7 @@ None</code></pre>
 <section id="differences-between-match-rates" class="level3">
 <h3 class="anchored" data-anchor-id="differences-between-match-rates">Differences between Match Rates</h3>
 <p>Next, I assess the effectiveness of different sizes of matched donations on the response rate.</p>
-<div id="f36c5f8c" class="cell" data-execution_count="6">
+<div id="bf50655c" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> ttest_ind</span>
@@ -786,7 +786,7 @@ None</code></pre>
 </div>
 </div>
 <p>The t-test series analyzing the size of the match ratio suggest that there is no significant differences in donation likelihood by match ratio. This supports the authors’ findings that while the essence of a match offer does increase donation likelihood, the actual size of the match has no effect on increasing donation rates.</p>
-<div id="0ccbbc62" class="cell" data-execution_count="7">
+<div id="3cb2ef3f" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Regress using 'ratio' as a categorical variable (automatically handles dummies)</span></span>
@@ -837,7 +837,7 @@ None</code></pre>
 <p>C(ratio)[T.2] = 0.0048: People who were offered a 2:1 match were more likely to donate compared to the control group. This result is statistically significant (p = 0.006), suggesting that the 2:1 offer had a real impact, but at less than half a percentage point.</p>
 <p>C(ratio)[T.3] = 0.0049: Similarly, those offered a 3:1 match were also more likely to give than people in the control group. This effect is statistically significant (p = 0.005) and about the same size as the 2:1 effect at just below half a percentage point.</p>
 <p>The regression output suggests that the differences between control, 1:1 match, 2:1 match, and 3:1 match are very small, telling us that the difference between match amounts does not impact donation probaility.</p>
-<div id="4973a0ea" class="cell" data-execution_count="8">
+<div id="0390fe18" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.formula.api <span class="im">as</span> smf</span>
@@ -887,7 +887,7 @@ Regression-estimated response rate differences:
 <section id="size-of-charitable-contribution" class="level3">
 <h3 class="anchored" data-anchor-id="size-of-charitable-contribution">Size of Charitable Contribution</h3>
 <p>In this subsection, I analyze the effect of the size of matched donation on the size of the charitable contribution.</p>
-<div id="97e2557e" class="cell" data-execution_count="9">
+<div id="71e0a02a" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> ttest_ind</span>
@@ -941,7 +941,7 @@ None</code></pre>
 <p>Intercept (0.8133): This is the average donation amount in the control group — around $0.81 per person (including all the zeroes from people who didn’t donate).</p>
 <p>Treatment coefficient (0.1536): This tells us that people in the treatment group gave about 15 cents more, on average, than those in the control group.</p>
 <p>The difference is marginally signficant with a p-value of 0.06, but the difference between the two values is relatively small, and we cannot definitively attribute the increase to the treatment effect.</p>
-<div id="edc03081" class="cell" data-execution_count="10">
+<div id="12499f03" class="cell" data-execution_count="10">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> ttest_ind</span>
@@ -996,7 +996,7 @@ None</code></pre>
 <p>Treatment coefficient (-1.6684): This tells us that people in the treatment group gave about $1.67 less than those in the control group (among those who donated). However, the p-value is 0.561, which is very high, meaning this difference is not statistically significant. In other words, there’s no strong evidence that the treatment influenced how much donors gave.</p>
 <p>This analysis suggests that offering a match did not affect how much donors gave, once they decided to give. While people in the treatment group gave a little less on average, this could easily be due to random chance. The treatment seemed to influence whether people donated, but not how much they gave once they did.</p>
 <p>We can interpret causality here since the treatment was randomly assigned. However, the causality is conditional on the fact that the participant chose to donate, not generalized to the entire population.</p>
-<div id="2c043b35" class="cell" data-execution_count="11">
+<div id="e79b550d" class="cell" data-execution_count="11">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -1053,7 +1053,7 @@ None</code></pre>
 <p>Further suppose that the true distribution of respondents who do get a charitable donation match of any size is Bernoulli with probability p=0.022 that a donation is made.</p>
 <section id="law-of-large-numbers" class="level3">
 <h3 class="anchored" data-anchor-id="law-of-large-numbers">Law of Large Numbers</h3>
-<div id="2abaf724" class="cell" data-execution_count="12">
+<div id="7ffb6903" class="cell" data-execution_count="12">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1109,7 +1109,7 @@ None</code></pre>
 </section>
 <section id="central-limit-theorem" class="level3">
 <h3 class="anchored" data-anchor-id="central-limit-theorem">Central Limit Theorem</h3>
-<div id="ce2cc891" class="cell" data-execution_count="13">
+<div id="b752253f" class="cell" data-execution_count="13">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>

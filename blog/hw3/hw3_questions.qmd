@@ -151,6 +151,10 @@ print(conjoint_clean.head(10))
 
 ## 4. Estimation via Maximum Likelihood
 
+In this section, we estimate the part-worth utilities (preference weights) for each attribute level using Maximum Likelihood Estimation (MLE).
+We assume a Multinomial Logit (MNL) model, and use the cleaned dataset to compute parameter estimates, standard errors, and 95% confidence intervals.
+These estimates reflect how much each attribute (e.g., Netflix brand, ads, price) influences consumer choices.
+
 ```{python}
 import pandas as pd
 import numpy as np
@@ -200,6 +204,11 @@ print(summary)
 
 
 ## 5. Estimation via Bayesian Methods
+
+Here we estimate the same part-worth utilities using a Bayesian framework.
+Instead of point estimates, we generate posterior distributions for each parameter using a sampling method (e.g., MCMC).
+This approach provides a fuller view of uncertainty and allows us to visualize the posterior mean, standard deviation, and credible intervals.
+Trace plots and posterior densities help diagnose convergence and distribution shape.
 
 ```{python}
 import numpy as np
