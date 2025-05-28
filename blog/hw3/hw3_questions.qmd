@@ -180,7 +180,7 @@ beta_hat = result.x
 hessian_inv = result.hess_inv
 std_errors = np.sqrt(np.diag(hessian_inv))
 
-z = 1.96  # critical value for 95% CI
+z = 1.96  #critical value for 95% CI
 conf_ints = np.vstack([beta_hat - z * std_errors, beta_hat + z * std_errors]).T
 
 param_names = ["beta_netflix", "beta_prime", "beta_ads", "beta_price"]
