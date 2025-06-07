@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.5">
+<meta name="generator" content="quarto-1.6.43">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -71,10 +71,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ff4371ef257df69894857e99c6ad0d06.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-3a98ddfa46b3eaf2cc1b551ee377edb7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-6bd9cfa162949bde0a231f530c97869d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -252,7 +252,7 @@ window.Quarto = {
 </section>
 <section id="data" class="level3">
 <h3 class="anchored" data-anchor-id="data">Data</h3>
-<div id="fce140ca" class="cell" data-execution_count="1">
+<div id="cb8f1ebd" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -321,7 +321,7 @@ window.Quarto = {
 </div>
 </div>
 <p>First, I will analyze the breakdown of patents according to customer status.</p>
-<div id="344ce91b" class="cell" data-execution_count="2">
+<div id="3d7ccd94" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
@@ -358,7 +358,7 @@ Name: patents, dtype: float64</code></pre>
 </div>
 <p>The histogram shows that both customers and non-customers have a right-skewed distribution of patent counts, with most companies holding between 2 and 4 patents. Non-customers are more frequent overall, especially at lower patent counts, though the gap narrows slightly as patent counts increase. Both groups include companies with high patent counts (10+), but these are rare. Overall, the distributions overlap substantially, suggesting customer status alone may not strongly predict the number of patents.</p>
 <p>Next, I will compare region and age by customer status.</p>
-<div id="89412f33" class="cell" data-execution_count="3">
+<div id="3ccd2c4a" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns </span>
@@ -440,7 +440,7 @@ L(\lambda \mid Y_1, \dots, Y_n) = \prod_{i=1}^{n} \frac{e^{-\lambda} \lambda^{Y_
 L(\lambda) = \frac{e^{-n\lambda} \lambda^{\sum_{i=1}^{n} Y_i}}{\prod_{i=1}^{n} Y_i!}
 \]</span></p>
 <p>Next, I will code the log-likelihood function for the Poisson model and plot it.</p>
-<div id="0a8daa6d" class="cell" data-execution_count="4">
+<div id="edf51972" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -453,7 +453,7 @@ L(\lambda) = \frac{e^{-n\lambda} \lambda^{\sum_{i=1}^{n} Y_i}}{\prod_{i=1}^{n} Y
 <span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.<span class="bu">sum</span>(Y <span class="op">*</span> np.log(lambda_) <span class="op">-</span> lambda_ <span class="op">-</span> gammaln(Y <span class="op">+</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="5bc5b68e" class="cell" data-execution_count="5">
+<div id="7ed44f3c" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> poisson_loglikelihood(lambda_, Y):</span>
@@ -506,7 +506,7 @@ L(\lambda) = \frac{e^{-n\lambda} \lambda^{\sum_{i=1}^{n} Y_i}}{\prod_{i=1}^{n} Y
 <h3 class="anchored" data-anchor-id="conclusion">✅ Conclusion:</h3>
 <p>The maximum likelihood estimate of <span class="math inline">\(\lambda\)</span> is simply the <strong>sample mean</strong>, <span class="math inline">\(\bar{Y}\)</span>, which aligns with intuition since the Poisson distribution has mean <span class="math inline">\(\lambda\)</span>.</p>
 <p>Using Python to find the MLE optimizer:</p>
-<div id="ecd5769f" class="cell" data-execution_count="6">
+<div id="3b8efea6" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -533,7 +533,7 @@ L(\lambda) = \frac{e^{-n\lambda} \lambda^{\sum_{i=1}^{n} Y_i}}{\prod_{i=1}^{n} Y
 <section id="estimation-of-poisson-regression-model" class="level3">
 <h3 class="anchored" data-anchor-id="estimation-of-poisson-regression-model">Estimation of Poisson Regression Model</h3>
 <p>Next, we extend our simple Poisson model to a Poisson Regression Model such that <span class="math inline">\(Y_i = \text{Poisson}(\lambda_i)\)</span> where <span class="math inline">\(\lambda_i = \exp(X_i'\beta)\)</span>. The interpretation is that the success rate of patent awards is not constant across all firms (<span class="math inline">\(\lambda\)</span>) but rather is a function of firm characteristics <span class="math inline">\(X_i\)</span>. Specifically, we will use the covariates age, age squared, region, and whether the firm is a customer of Blueprinty.</p>
-<div id="1eb13b12" class="cell" data-execution_count="7">
+<div id="a75a4aca" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -547,7 +547,7 @@ L(\lambda) = \frac{e^{-n\lambda} \lambda^{\sum_{i=1}^{n} Y_i}}{\prod_{i=1}^{n} Y
 <span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">-</span>np.<span class="bu">sum</span>(Y <span class="op">*</span> eta <span class="op">-</span> lambda_ <span class="op">-</span> gammaln(Y <span class="op">+</span> <span class="dv">1</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="b03794a2" class="cell" data-execution_count="8">
+<div id="285b79d7" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -595,7 +595,7 @@ L(\lambda) = \frac{e^{-n\lambda} \lambda^{\sum_{i=1}^{n} Y_i}}{\prod_{i=1}^{n} Y
 <pre><code>
 Poisson Regression Results:
             Coefficient  Std. Error
-intercept       -0.5100      0.1931
+intercept       -0.5100      0.1930
 age              0.1487      0.0145
 age_sq          -0.0030      0.0003
 iscustomer       0.2076      0.0329
@@ -605,7 +605,7 @@ South            0.0566      0.0562
 Southwest        0.0506      0.0496</code></pre>
 </div>
 </div>
-<div id="25edc59f" class="cell" data-execution_count="9">
+<div id="afffaf62" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
@@ -664,7 +664,7 @@ Southwest        0.0506      0.0472      1.0519</code></pre>
 </ul></li>
 </ul>
 <p>Together, the model suggests that age, customer status, and region may all influence patent outcomes, and that Blueprinty’s customers tend to have higher success rates — even after controlling for other variables.</p>
-<div id="81353f59" class="cell" data-execution_count="10">
+<div id="00f7fd06" class="cell" data-execution_count="10">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>X_base <span class="op">=</span> X.drop(columns<span class="op">=</span><span class="st">'intercept'</span>, errors<span class="op">=</span><span class="st">'ignore'</span>).copy()</span>
@@ -727,7 +727,7 @@ Variable Definitions
 </div>
 </div>
 </div>
-<div id="122eebb7" class="cell" data-execution_count="11">
+<div id="e3b0d561" class="cell" data-execution_count="11">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -855,7 +855,7 @@ Variable Definitions
 <section id="exploratory-data-analysis" class="level1">
 <h1>Exploratory Data Analysis</h1>
 <p>First, I will start by cleaning and preparing the data.</p>
-<div id="ef0cc7fe" class="cell" data-execution_count="12">
+<div id="a6f74b19" class="cell" data-execution_count="12">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>relevant_cols <span class="op">=</span> [</span>
@@ -874,7 +874,7 @@ Variable Definitions
 <p>Next, I will conduct futher exploratory analysis of key variable relationships and distributions.</p>
 <section id="number-of-reviews" class="level3">
 <h3 class="anchored" data-anchor-id="number-of-reviews">Number of Reviews</h3>
-<div id="b3840b3d" class="cell" data-execution_count="13">
+<div id="6813b3b3" class="cell" data-execution_count="13">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -899,7 +899,7 @@ Variable Definitions
 </section>
 <section id="reviews-vs.-price" class="level3">
 <h3 class="anchored" data-anchor-id="reviews-vs.-price">Reviews vs.&nbsp;Price</h3>
-<div id="ddda20e9" class="cell" data-execution_count="14">
+<div id="4eb8ff3b" class="cell" data-execution_count="14">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
@@ -922,7 +922,7 @@ Variable Definitions
 </section>
 <section id="average-number-of-reviews-by-room-type" class="level3">
 <h3 class="anchored" data-anchor-id="average-number-of-reviews-by-room-type">Average Number of Reviews by Room Type</h3>
-<div id="a739ec0e" class="cell" data-execution_count="15">
+<div id="b573feaa" class="cell" data-execution_count="15">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>avg_reviews <span class="op">=</span> df_airbnb.groupby(<span class="st">"room_type"</span>)[<span class="st">"number_of_reviews"</span>].mean().sort_values()</span>
@@ -946,7 +946,7 @@ Variable Definitions
 </section>
 <section id="poisson-regression-model" class="level1">
 <h1>Poisson Regression Model</h1>
-<div id="31198760" class="cell" data-execution_count="16">
+<div id="f8213bdf" class="cell" data-execution_count="16">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
@@ -976,20 +976,20 @@ Model:                            GLM   Df Residuals:                    30366
 Model Family:                 Poisson   Df Model:                            5
 Link Function:                    Log   Scale:                          1.0000
 Method:                          IRLS   Log-Likelihood:            -5.3886e+05
-Date:                Wed, 28 May 2025   Deviance:                   9.5535e+05
-Time:                        10:17:21   Pearson chi2:                 1.44e+06
+Date:                Fri, 06 Jun 2025   Deviance:                   9.5535e+05
+Time:                        19:06:33   Pearson chi2:                 1.44e+06
 No. Iterations:                     5   Pseudo R-squ. (CS):             0.4249
 Covariance Type:            nonrobust                                         
-==================================================================================================
-                                     coef    std err          z      P&gt;|z|      [0.025      0.975]
---------------------------------------------------------------------------------------------------
-Intercept                          2.8923      0.018    160.447      0.000       2.857       2.928
-room_type_Private_room[T.True]     0.0570      0.003     17.244      0.000       0.051       0.064
-room_type_Shared_room[T.True]     -0.1405      0.009    -15.589      0.000      -0.158      -0.123
-log_price                          0.0995      0.003     38.742      0.000       0.094       0.105
-review_scores_value               -0.0436      0.001    -33.365      0.000      -0.046      -0.041
-instant_bookable                   0.3439      0.003    119.519      0.000       0.338       0.350
-==================================================================================================</code></pre>
+==========================================================================================
+                             coef    std err          z      P&gt;|z|      [0.025      0.975]
+------------------------------------------------------------------------------------------
+Intercept                  2.8923      0.018    160.447      0.000       2.857       2.928
+log_price                  0.0995      0.003     38.742      0.000       0.094       0.105
+review_scores_value       -0.0436      0.001    -33.365      0.000      -0.046      -0.041
+instant_bookable           0.3439      0.003    119.519      0.000       0.338       0.350
+room_type_Private_room     0.0570      0.003     17.244      0.000       0.051       0.064
+room_type_Shared_room     -0.1405      0.009    -15.589      0.000      -0.158      -0.123
+==========================================================================================</code></pre>
 </div>
 </div>
 </section>

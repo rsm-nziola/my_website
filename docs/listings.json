@@ -1,10 +1,37 @@
 [
   {
+    "listing": "/my_website/projects.html",
+    "items": [
+      "/my_website/blog/hw1/main.html",
+      "/my_website/blog/hw3/hw3_questions.html",
+      "/my_website/blog/hw2/hw2_questions.html",
+      "/my_website/blog/hw1/hw1_questions.html"
+    ]
+  },
+  {
+    "listing": "/my_website-1/projects.html",
+    "items": [
+      "/my_website-1/blog/hw1/main.html",
+      "/my_website-1/blog/hw3/hw3_questions.html",
+      "/my_website-1/blog/hw2/hw2_questions.html",
+      "/my_website-1/blog/hw1/hw1_questions.html"
+    ]
+  },
+  {
     "listing": "/projects.html",
     "items": [
+      "/my_website-1/blog/hw1/main.html",
+      "/my_website/blog/hw1/main.html",
       "/blog/hw1/main.html",
+      "/blog/hw4/hw4_questions.html",
+      "/my_website-1/blog/hw3/hw3_questions.html",
+      "/my_website/blog/hw3/hw3_questions.html",
       "/blog/hw3/hw3_questions.html",
+      "/my_website-1/blog/hw2/hw2_questions.html",
+      "/my_website/blog/hw2/hw2_questions.html",
       "/blog/hw2/hw2_questions.html",
+      "/my_website-1/blog/hw1/hw1_questions.html",
+      "/my_website/blog/hw1/hw1_questions.html",
       "/blog/hw1/hw1_questions.html"
     ]
   }
