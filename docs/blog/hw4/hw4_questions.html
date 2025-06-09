@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.43">
+<meta name="generator" content="quarto-1.7.5">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -71,10 +71,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ff4371ef257df69894857e99c6ad0d06.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6bd9cfa162949bde0a231f530c97869d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-3a98ddfa46b3eaf2cc1b551ee377edb7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -220,7 +220,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="load-and-preprocess-the-data" class="level1">
 <h1>Load and Preprocess the Data</h1>
 <p>First, we will load and preprocess the data.</p>
-<div id="5fa4d7fc" class="cell" data-execution_count="1">
+<div id="d465f6e7" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -244,7 +244,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="implement-k-means" class="level1">
 <h1>Implement K-Means</h1>
 <p>Next, we will follow the K-Means algorithm steps: initialize centroids, assign clusters, and update centroids until convergence.</p>
-<div id="7678971f" class="cell" data-execution_count="2">
+<div id="69fc862e" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> initialize_centroids(X, k):</span>
@@ -277,7 +277,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="visualize-the-clustering-progress" class="level1">
 <h1>Visualize the Clustering Progress</h1>
 <p>To truly “see” the algorithm working, let’s visualize the clusters and centroids at each iteration.</p>
-<div id="77ebb0c1" class="cell" data-execution_count="3">
+<div id="f7303276" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_clusters(X, labels, centroids, title):</span>
@@ -391,7 +391,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="compare-with-built-in-k-means-function" class="level1">
 <h1>Compare with Built-In K-Means Function</h1>
 <p>To verify, we will use Scikit-Learn’s K-Means function and compare,</p>
-<div id="4e441e6f" class="cell" data-execution_count="4">
+<div id="885d0f18" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> KMeans</span>
@@ -427,7 +427,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="compute-wcss-and-silhouette-scores" class="level1">
 <h1>Compute WCSS and Silhouette Scores</h1>
-<div id="b037bd52" class="cell" data-execution_count="5">
+<div id="c6b02367" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> KMeans</span>
@@ -456,7 +456,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="plot-the-elbow-curve-wcss" class="level1">
 <h1>Plot the Elbow Curve (WCSS)</h1>
 <p>The “elbow method” looks for the value of K where the WCSS drops off sharply (like and elbow bend).</p>
-<div id="7a35446e" class="cell" data-execution_count="6">
+<div id="730b34a8" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">4</span>))</span>
@@ -479,7 +479,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="plot-silhouette-scores" class="level1">
 <h1>Plot Silhouette Scores</h1>
 <p>Silhouette scores range from -1 to 1, where higher is better. A peak suggests the best cluster separation and cohesion.</p>
-<div id="42ff24a1" class="cell" data-execution_count="7">
+<div id="e6cff3ae" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">4</span>))</span>
@@ -515,7 +515,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="a.-k-nearest-neighbors" class="level2">
 <h2 class="anchored" data-anchor-id="a.-k-nearest-neighbors">2a. K Nearest Neighbors</h2>
 <p>First, I will simulate data. The code generates a dataset with two features, <code>x1</code> and <code>x2</code>, and a binary outcome variable <code>y</code> that is determined by whether <code>x2</code> is above or below a wiggly boundary defined by a sin function</p>
-<div id="f7cea1e2" class="cell" data-execution_count="8">
+<div id="c48c4b9d" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -543,7 +543,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 <p>Next, I will plot the data.</p>
-<div id="a369462a" class="cell" data-execution_count="9">
+<div id="2477c33e" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -589,7 +589,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Now, I will generate a new test dataset with a different random seed.</p>
-<div id="79b72fff" class="cell" data-execution_count="10">
+<div id="c7b94323" class="cell" data-execution_count="10">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -617,7 +617,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="define-the-manual-knn-function" class="level1">
 <h1>Define the Manual KNN Function</h1>
 <p>We’ll compute distances from the test point to all training points, then vote among the k nearest neighbors.</p>
-<div id="cfb746f0" class="cell" data-execution_count="11">
+<div id="31de7f82" class="cell" data-execution_count="11">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> collections <span class="im">import</span> Counter</span>
@@ -641,7 +641,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="prepare-data-for-classification" class="level1">
 <h1>Prepare Data for Classification</h1>
-<div id="cbc405dd" class="cell" data-execution_count="12">
+<div id="b069e0da" class="cell" data-execution_count="12">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>X_train <span class="op">=</span> dat[[<span class="st">"x1"</span>, <span class="st">"x2"</span>]].values</span>
@@ -654,7 +654,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="run-our-manual-knn-classifier" class="level1">
 <h1>Run Our Manual KNN Classifier</h1>
-<div id="65278b20" class="cell" data-execution_count="13">
+<div id="9af8c333" class="cell" data-execution_count="13">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>y_pred_manual <span class="op">=</span> knn_predict(X_train, y_train, X_test, k<span class="op">=</span><span class="dv">5</span>)</span>
@@ -669,7 +669,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="validate-with-sckit-learn" class="level1">
 <h1>Validate with sckit-learn</h1>
-<div id="cfe3dd8c" class="cell" data-execution_count="14">
+<div id="d434c33f" class="cell" data-execution_count="14">
 <details class="code-fold">
 <summary>show code</summary>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.neighbors <span class="im">import</span> KNeighborsClassifier</span>
@@ -683,12 +683,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>scikit-learn KNN Accuracy (k=5): 0.90</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>/Users/nicoleziola/opt/anaconda3/lib/python3.9/site-packages/sklearn/neighbors/_classification.py:228: FutureWarning:
-
-Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
-</code></pre>
 </div>
 </div>
 </section>
@@ -708,35 +702,35 @@ Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior
 <section id="run-knn-across-k1-to-30-plot" class="level1">
 <h1>Run KNN Across K=1 to 30 &amp; Plot</h1>
 <p>We will store the accuracy and plot to visualize K choice performance.</p>
-<div id="5149f965" class="cell" data-execution_count="15">
+<div id="c3518ff8" class="cell" data-execution_count="15">
 <details class="code-fold">
 <summary>show code</summary>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>k_values <span class="op">=</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">31</span>)</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>accuracies <span class="op">=</span> []</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> k_values:</span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    y_pred <span class="op">=</span> knn_predict(X_train, y_train, X_test, k<span class="op">=</span>k)</span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    acc <span class="op">=</span> np.mean(y_pred <span class="op">==</span> y_test)</span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    accuracies.append(acc)</span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>    plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>plt.plot(k_values, accuracies, marker<span class="op">=</span><span class="st">'o'</span>)</span>
-<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"KNN Accuracy on Test Data for Different K"</span>)</span>
-<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Number of Neighbors (K)"</span>)</span>
-<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Classification Accuracy"</span>)</span>
-<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>plt.xticks(k_values)</span>
-<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
-<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>optimal_k <span class="op">=</span> k_values[np.argmax(accuracies)]</span>
-<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>optimal_acc <span class="op">=</span> <span class="bu">max</span>(accuracies)</span>
-<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>plt.axvline(optimal_k, color<span class="op">=</span><span class="st">"red"</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, label<span class="op">=</span><span class="ss">f"Optimal K = </span><span class="sc">{</span>optimal_k<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>k_values <span class="op">=</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">31</span>)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>accuracies <span class="op">=</span> []</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> k_values:</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    y_pred <span class="op">=</span> knn_predict(X_train, y_train, X_test, k<span class="op">=</span>k)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    acc <span class="op">=</span> np.mean(y_pred <span class="op">==</span> y_test)</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    accuracies.append(acc)</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>    plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>plt.plot(k_values, accuracies, marker<span class="op">=</span><span class="st">'o'</span>)</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"KNN Accuracy on Test Data for Different K"</span>)</span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Number of Neighbors (K)"</span>)</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Classification Accuracy"</span>)</span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>plt.xticks(k_values)</span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>optimal_k <span class="op">=</span> k_values[np.argmax(accuracies)]</span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a>optimal_acc <span class="op">=</span> <span class="bu">max</span>(accuracies)</span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a>plt.axvline(optimal_k, color<span class="op">=</span><span class="st">"red"</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, label<span class="op">=</span><span class="ss">f"Optimal K = </span><span class="sc">{</span>optimal_k<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
-<pre><code>/var/folders/98/5z7782k12qx9x0l30j5t09fc0000gn/T/ipykernel_17910/2096491810.py:9: RuntimeWarning:
+<pre><code>/tmp/ipykernel_80630/2096491810.py:9: RuntimeWarning:
 
-More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
 </code></pre>
 </div>
 <div class="cell-output cell-output-display">
