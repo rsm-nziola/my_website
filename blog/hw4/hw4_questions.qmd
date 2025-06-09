@@ -1,5 +1,9 @@
 ---
 title: "Machine Learning from Scratch: K-Means Algorithms"
+format:
+    html:
+        code-fold: True
+        code-summary: "show code"
 author: "Nicole Ziola"
 date: 06-06-2025
 ---
